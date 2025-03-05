@@ -14,12 +14,12 @@ timezone:
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Chirpy # the main title
+title: Shashwath V R # the main title
 
-tagline: A text-focused Jekyll theme # it will display as the subtitle
+tagline: When there is WILL, there is a WAY # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  A minimal, responsive and feature-rich Jekyll theme for technical writing.
+  blog, shash, github
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -98,7 +98,7 @@ theme_mode: # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: https://media.licdn.com/dms/image/v2/D5603AQF-RpG_-dLJzg/profile-displayphoto-shrink_200_200/B56ZSuEbbqHsAY-/0/1738087186273?e=1746662400&v=beta&t=4sXtOTb0tGs0ADrp38DlWu4TJb4ONQifPm43DONZmNY
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
