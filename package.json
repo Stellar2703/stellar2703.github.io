@@ -5,8 +5,6 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
-    "export": "next build",
-    "deploy": "npm run export && touch out/.nojekyll",
     "start": "next start",
     "lint": "eslint",
     "parse:resume": "node scripts/parse-resume.cjs ../Shashwath_V_R_Resume.pdf",

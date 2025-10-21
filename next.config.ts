@@ -3,8 +3,6 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: process.env.NODE_ENV === 'production' ? '/stellar2703-portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/stellar2703-portfolio/' : '',
   images: {
     unoptimized: true,
     remotePatterns: [
