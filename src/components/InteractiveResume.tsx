@@ -5,11 +5,8 @@ import {
   Download, 
   Printer, 
   QrCode, 
-  ExternalLink,
   Eye,
-  Zap,
-  Share2,
-  X
+  Share2
 } from "lucide-react";
 import { useState } from "react";
 import QRCodeLib from 'qrcode';
@@ -345,6 +342,7 @@ export function InteractiveResume() {
             
             {qrCodeData && (
               <div className="bg-white p-4 rounded-xl mb-6 inline-block">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img 
                   src={qrCodeData} 
                   alt="Portfolio QR Code" 

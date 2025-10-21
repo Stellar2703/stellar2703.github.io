@@ -2,19 +2,16 @@
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 import Link from "next/link";
-import { cn } from "@/lib/cn";
 import { useState, useEffect } from "react";
 import { DownloadResume } from "./DownloadResume";
 import { TypingAnimation } from "./InteractiveElements";
 
 type Props = {
   name?: string;
-  title?: string;
   summary?: string;
-  urls?: { github?: string; linkedin?: string; portfolio?: string; email?: string };
 };
 
-export function Hero({ name = "", title = "", summary = "", urls = {} }: Props) {
+export function Hero({ name = "", summary = "" }: Props) {
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 500], [0, 150]);
   const opacity = useTransform(scrollY, [0, 300], [1, 0]);

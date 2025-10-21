@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, ExternalLink, Award, FileText } from "lucide-react";
+import { Github, Linkedin, Mail, ExternalLink, Award } from "lucide-react";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 

@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Terminal as TerminalIcon, Play, Zap, Code } from "lucide-react";
+import { Terminal as TerminalIcon, Play } from "lucide-react";
 
 interface Command {
   input: string;
@@ -48,10 +48,10 @@ const commands: Command[] = [
 ];
 
 export function InteractiveTerminal() {
-  const [currentCommandIndex, setCurrentCommandIndex] = useState(0);
+  const [, setCurrentCommandIndex] = useState(0);
   const [currentCommand, setCurrentCommand] = useState("");
   const [output, setOutput] = useState<string[]>([]);
-  const [isTyping, setIsTyping] = useState(false);
+  const [, setIsTyping] = useState(false);
   const [showCursor, setShowCursor] = useState(true);
   const [isRunning, setIsRunning] = useState(false);
 
@@ -205,7 +205,7 @@ export function InteractiveTerminal() {
           
           {!isRunning && output.length === 0 && (
             <div className="text-white/50">
-              Click "Run Demo" to see an interactive demonstration of my skills and experience!
+              Click &quot;Run Demo&quot; to see an interactive demonstration of my skills and experience!
             </div>
           )}
         </div>

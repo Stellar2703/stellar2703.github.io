@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import resume from "@/data/resume.json";
 import type { Resume } from "@/types/resume";
 import { Hero } from "@/components/Hero";
-import { SkillsCloud } from "@/components/SkillsCloud";
 import { SkillsVisualization } from "@/components/SkillsVisualization";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
 import { ProjectsGrid } from "@/components/ProjectsGrid";
@@ -20,7 +19,6 @@ export default function Home() {
   const r = resume as Resume;
   const name = r.basics?.name || "";
   const summary = r.basics?.summary || "";
-  const titleGuess = "Cloud and DevOps Engineer and Full Stack Engineer";
   const urls = {
     github: r.basics?.urls?.github,
     linkedin: r.basics?.urls?.linkedin,
@@ -48,7 +46,7 @@ export default function Home() {
       
       <main className="mx-auto max-w-7xl">
         <section id="hero">
-          <Hero name={name} title={titleGuess} summary={summary} urls={urls} />
+          <Hero name={name} summary={summary} />
         </section>
         
         <div className="px-6 sm:px-10 space-y-8 md:space-y-12">

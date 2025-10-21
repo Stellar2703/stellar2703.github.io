@@ -16,7 +16,7 @@ interface LeadershipGalleryProps {
   items: string[];
 }
 
-const LeadershipGallery = ({ items }: LeadershipGalleryProps) => {
+const LeadershipGallery = ({ }: LeadershipGalleryProps) => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   // Enhanced leadership data with images and details

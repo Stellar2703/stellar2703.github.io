@@ -1,3 +1,8 @@
+import resume from "@/data/resume.json";
+import type { Resume } from "@/types/resume";
+import { saveAs } from "file-saver";
+import { Document, Paragraph, TextRun, HeadingLevel, AlignmentType } from "docx";
+
 export function downloadPDF() {
   // Create a link element and trigger download of the PDF from public folder
   const link = document.createElement('a');
@@ -9,7 +14,7 @@ export function downloadPDF() {
 }
 
 export function downloadTXT() {
-  const r = resume;
+  const r = resume as Resume;
   let text = `${r.basics?.name || ""}\n`;
   text += `${r.basics?.email || ""}\n`;
   text += `GitHub: ${r.basics?.urls?.github || ""}\n`;
@@ -60,7 +65,7 @@ export function downloadTXT() {
 }
 
 export async function downloadDOCX() {
-  const r = resume;
+  const r = resume as Resume;
   
   const doc = new Document({
     sections: [

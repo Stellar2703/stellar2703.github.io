@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { Zap, Code, Database, Cloud, Settings, TrendingUp } from "lucide-react";
+import { Code, Database, Cloud, Settings, TrendingUp } from "lucide-react";
 import { useState } from "react";
 
 type SkillCategory = {
