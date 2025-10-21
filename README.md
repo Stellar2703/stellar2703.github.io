@@ -1,3 +1,31 @@
+# Portfolio
+
+Animated portfolio built with Next.js App Router, Tailwind CSS, Framer Motion, and Three.js effects.
+
+## Development
+
+1. Parse your resume PDF into JSON (already configured for `Shashwath_V_R_Resume.pdf` one folder up):
+
+```powershell
+npm run parse:resume
+```
+
+2. Start the dev server:
+
+```powershell
+npm run dev
+```
+
+3. Edit content at `src/data/resume.json` or re-run the parser after updating your PDF.
+
+## Deploy
+
+- Push to GitHub and import on Vercel, or run `npm run build` locally.
+
+## Notes
+
+- The PDF parser is heuristic; review `src/data/resume.json` and adjust as needed.
+- You can customize animations in components under `src/components`.
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started

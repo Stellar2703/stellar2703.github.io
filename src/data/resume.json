@@ -1,0 +1,261 @@
+{
+  "basics": {
+    "name": "SHASHWATH V R",
+    "email": "rajammalshash@gmail.com",
+    "location": "Erode, India",
+    "urls": {
+      "github": "https://github.com/stellar2703",
+      "linkedin": "https://linkedin.com/in/stellar2703",
+      "leetcode": "https://leetcode.com/u/Stellar2703/",
+      "portfolio": "https://stellar2703.github.io",
+      "credly": "https://www.credly.com/users/stellar2703",
+      "blog": "https://stellar2703.github.io"
+    },
+    "summary": "Google Certified Cloud Architect with strong foundations in DSA and Software Engineering. Skilled in building scalable cloud-native apps across AWS, GCP, and Azure with CI/CD automation via Docker, Kubernetes, and Terraform. Active GDG Organizer and Microsoft Student Ambassador—passionate about designing efficient systems, mentoring peers, and delivering impactful solutions."
+  },
+  "skills": [
+    "Python",
+    "Data Structures & Algorithms",
+    "React",
+    "Node.js",
+    "OOP",
+    "AWS",
+    "GCP",
+    "Azure",
+    "OpenStack",
+    "Proxmox",
+    "WSL",
+    "Docker",
+    "Kubernetes",
+    "Git",
+    "Jenkins",
+    "Ansible",
+    "CI/CD",
+    "GitHub Actions",
+    "MySQL",
+    "MongoDB",
+    "Prometheus",
+    "Grafana",
+    "Netdata",
+    "Algorithm Design",
+    "System Optimization",
+    "Agile",
+    "REST APIs"
+  ],
+  "skillsByCategory": {
+    "Programming & CS Fundamentals": [
+      "Python",
+      "Data Structures & Algorithms",
+      "React",
+      "Node.js",
+      "OOP"
+    ],
+    "Cloud & Infrastructure": [
+      "AWS",
+      "GCP",
+      "Azure",
+      "OpenStack",
+      "Proxmox",
+      "WSL"
+    ],
+    "DevOps & Tools": [
+      "Docker",
+      "Kubernetes",
+      "Git",
+      "Jenkins",
+      "Ansible",
+      "CI/CD Pipelines",
+      "GitHub Actions"
+    ],
+    "Databases & Monitoring": [
+      "MySQL",
+      "MongoDB",
+      "Prometheus",
+      "Grafana",
+      "Netdata"
+    ],
+    "Research & Engineering Practices": [
+      "Algorithm Design",
+      "System Optimization",
+      "Agile Methodology",
+      "REST APIs"
+    ]
+  },
+  "education": [
+    {
+      "institution": "Bannari Amman Institute of Technology",
+      "degree": "B.Tech in Information Technology (Honors)",
+      "start": "Sep 2023",
+      "end": "Mar 2027",
+      "location": "Tamil Nadu, India"
+    },
+    {
+      "institution": "Rank International School",
+      "degree": "HSLC",
+      "start": "Jun 2021",
+      "end": "Jun 2023",
+      "location": "Tamil Nadu, India"
+    }
+  ],
+  "experience": [
+    {
+      "title": "Software Development Intern (DevOps/Cloud) – Rampex Technologies (Aug 2025 – Present)",
+      "bullets": [
+        "Contributing to the development of an LMS portal with a focus on scalable features and UX enhancements.",
+        "Ensuring seamless integration with company workflows and CI/CD practices."
+      ]
+    },
+    {
+      "title": "Freelance SRE ( Site Reliability Engnr ) and SDE ( Software Development Engnr )    (Aug 2024 – Present)",
+      "bullets": [
+        "Depolyed industry websites, wordpress sites",
+        "Full Production Ready AWS,GCP setup to Clients with its Application"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Terminus Assess – Interactive Student Test Portal",
+      "description": "Full-stack platform with real-time Linux terminal integration for student assessments; automated grading reduces evaluation time by 50%.",
+      "url": "https://github.com/stellar2703/Linux-Test_Portal-Backend",
+      "image": "/projects/terminus.png",
+      "tags": [
+        "React",
+        "Node.js",
+        "SSH",
+        "MySQL",
+        "CI/CD",
+        "AWS",
+        "Jenkins",
+        "REST API",
+        "Docker"
+      ]
+    },
+    {
+      "name": "LANtern – Network Power Management System",
+      "description": "Web app to manage power for Windows/Linux systems individually or in clusters with JWT authentication; backend task scheduling optimized API usage, cutting lab/offices power management time by 80%.",
+      "url": "https://github.com/stellar2703/LANtern",
+      "image": "/projects/lanturn.png",
+      "tags": [
+        "React",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "Wake-on-LAN",
+        "JWT",
+        "Bootstrap"
+      ]
+    },
+    {
+      "name": "FinSense – Financial Analytics Platform",
+      "description": "Financial analysis tool for data-driven insights with data processing and visualization capabilities. Code Cubicle hackathon project.",
+      "url": "https://github.com/stellar2703/FinSense_Code_Cubicle",
+      "image": "/projects/finsense.png",
+      "tags": [
+        "Python",
+        "Data Analytics",
+        "Visualization"
+      ]
+    },
+    {
+      "name": "Medical Chatbot with AI",
+      "description": "Intelligent chatbot for medical consultations with natural language processing for patient interaction and integrated knowledge base for medical information retrieval.",
+      "url": "https://github.com/stellar2703/Medical_Chatbot",
+      "image": "/projects/medical-bot.png",
+      "tags": [
+        "Python",
+        "NLP",
+        "Machine Learning"
+      ]
+    },
+    {
+      "name": "Jenkins CI/CD Pipeline",
+      "description": "Designed and implemented continuous integration/continuous deployment pipelines with automated build, test, and deployment processes integrated with version control.",
+      "url": "https://github.com/stellar2703/Jenkins_CI-CD",
+      "image": "/projects/jenkins.svg",
+      "tags": [
+        "Jenkins",
+        "Docker",
+        "CI/CD",
+        "Automation"
+      ]
+    },
+    {
+      "name": "Kubernetes Deployment",
+      "description": "Deployed containerized applications using Kubernetes with pod management, services, and ingress controllers. Configuration management with YAML manifests.",
+      "url": "https://github.com/stellar2703/Kubernetes_tutorial",
+      "image": "/projects/kubernetes.svg",
+      "tags": [
+        "Kubernetes",
+        "Docker",
+        "Container Orchestration"
+      ]
+    },
+    {
+      "name": "Proxmox Management Frontend",
+      "description": "Web-based management interface for Proxmox virtual environment with real-time VM and container monitoring and resource allocation features.",
+      "url": "https://github.com/stellar2703/Proxmox-Frontend",
+      "image": "/projects/proxmox.svg",
+      "tags": [
+        "JavaScript",
+        "React",
+        "Proxmox API"
+      ]
+    },
+    {
+      "name": "PDF Page Splitter Tool",
+      "description": "Automated tool to separate PDF pages based on text patterns with text extraction and document manipulation algorithms. Command-line interface for batch processing.",
+      "url": "https://github.com/stellar2703/PDF_file_page_splitter",
+      "image": "/projects/pdf-splitter.png",
+      "tags": [
+        "Python",
+        "PyPDF2",
+        "Automation"
+      ]
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Professional Cloud Architect",
+      "issuer": "Google",
+      "date": "Mar 2025",
+      "image": "/certifications/gcp-architect.svg"
+    },
+    {
+      "name": "Google Cloud Digital Leader",
+      "issuer": "Google",
+      "date": "Feb 2025",
+      "image": "/certifications/gcp-leader.svg"
+    },
+    {
+      "name": "GitHub Foundations",
+      "issuer": "GitHub",
+      "date": "Jan 2025",
+      "image": "/certifications/github.svg"
+    },
+    {
+      "name": "OCI MultiCloud Architect",
+      "issuer": "Oracle",
+      "date": "Oct 2025",
+      "image": "/certifications/oci-architect.svg"
+    },
+    {
+      "name": "OCI Foundations Associate",
+      "issuer": "Oracle",
+      "date": "Sep 2025",
+      "image": "/certifications/oci-foundations.svg"
+    }
+  ],
+  "languages": [
+    "English",
+    "Tamil",
+    "Hindi"
+  ],
+  "leadership": [
+    "Winner – Code Cubicle Hackathon (Microsoft, Pathway, Trae AI)",
+    "Google Developer Groups on Campus Organizer – led initiatives and guided project development",
+    "Microsoft Student Ambassador – conducted workshops and mentored peers"
+  ],
+  "generatedAt": "2025-10-20T04:11:24.094Z",
+  "sourcePdf": "Shashwath_V_R_Resume.pdf"
+}
