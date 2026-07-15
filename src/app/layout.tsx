@@ -5,7 +5,7 @@ import { BackgroundFX } from "@/components/BackgroundFX";
 import { Navbar } from "@/components/Navbar";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { BackToTop } from "@/components/BackToTop";
-import { CustomCursor } from "@/components/CustomCursor";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { generatePersonSchema, generateWebSiteSchema } from "@/lib/schema";
 
 const geistSans = Geist({
@@ -20,31 +20,36 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Stellar",
-  description: "Full Stack Developer specializing in modern web technologies. View my projects, skills, and experience in building scalable applications.",
-  keywords: ["Full Stack Developer", "Web Development", "React", "Next.js", "Portfolio"],
-  authors: [{ name: "Your Name" }],
-  creator: "Your Name",
-  metadataBase: new URL("https://yourwebsite.com"),
+  description: "Aspiring Software Engineer specializing in backend systems, full-stack applications, and cloud-native architectures. View my projects, skills, and experience.",
+  icons: {
+    icon: "/head.jpeg",
+    shortcut: "/head.jpeg",
+    apple: "/head.jpeg",
+  },
+  keywords: ["Software Engineer", "Backend Developer", "DevOps", "Cloud Architect", "Shashwath V R", "Portfolio"],
+  authors: [{ name: "Shashwath V R" }],
+  creator: "Shashwath V R",
+  metadataBase: new URL("https://stellar2703.github.io"),
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://yourwebsite.com",
-    title: "Portfolio | Full Stack Developer",
-    description: "Full Stack Developer specializing in modern web technologies",
-    siteName: "Portfolio",
+    url: "https://stellar2703.github.io",
+    title: "Shashwath V R | Software Engineer Portfolio",
+    description: "Aspiring Software Engineer specializing in backend systems, full-stack applications, and cloud-native architectures.",
+    siteName: "Shashwath V R Portfolio",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Portfolio Preview",
+        alt: "Shashwath V R Portfolio Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio | Full Stack Developer",
-    description: "Full Stack Developer specializing in modern web technologies",
+    title: "Shashwath V R | Software Engineer Portfolio",
+    description: "Aspiring Software Engineer specializing in backend systems, full-stack applications, and cloud-native architectures.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -66,7 +71,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <script
           type="application/ld+json"
@@ -76,15 +81,17 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground transition-colors duration-300`}
       >
-        <CustomCursor />
-        <ScrollProgress />
-        <BackgroundFX />
-        <Navbar />
-        <BackToTop />
-        <div className="relative pt-20">{children}</div>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+          <ScrollProgress />
+          <BackgroundFX />
+          <Navbar />
+          <BackToTop />
+          <div className="relative pt-20">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   );
 }
+

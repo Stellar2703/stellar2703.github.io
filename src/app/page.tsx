@@ -9,11 +9,14 @@ import { ProjectsGrid } from "@/components/ProjectsGrid";
 import { CertificationsList } from "@/components/CertificationsList";
 import { EducationList } from "@/components/EducationList";
 import { ContactForm } from "@/components/ContactForm";
-import { InteractiveResume } from "@/components/InteractiveResume";
-import { InteractiveTerminal } from "@/components/InteractiveElements";
-import { UniqueSections } from "@/components/UniqueSections";
-import SocialSidebar from '@/components/SocialSidebar';
-import LeadershipGallery from '@/components/LeadershipGallery';
+import { StatsBar } from "@/components/StatsBar";
+import { Specializations } from "@/components/Specializations";
+import { TechMarquee } from "@/components/TechMarquee";
+import { Footer } from "@/components/Footer";
+import { SectionNavigator } from "@/components/SectionNavigator";
+import { User, Mail, MapPin, Globe, Award } from "lucide-react";
+import SocialSidebar from "@/components/SocialSidebar";
+import { EmailSidebar } from "@/components/EmailSidebar";
 
 export default function Home() {
   const r = resume as Resume;
@@ -28,148 +31,159 @@ export default function Home() {
     credly: r.basics?.urls?.credly,
     blog: r.basics?.urls?.blog,
   };
-  
-  // Group skills by category for the visualization
-  const skillsByCategory = {
-    "Frontend": ["React", "Next.js", "TypeScript", "JavaScript", "HTML", "CSS"],
-    "Backend": ["Node.js", "Python", "Express", "REST APIs"],
-    "Cloud": ["AWS", "GCP", "Azure", "Docker", "Kubernetes"],
-    "Database": ["MySQL", "MongoDB", "PostgreSQL"],
-    "DevOps": ["Jenkins", "CI/CD", "GitHub Actions", "Docker"],
-    "Tools": ["Git", "VS Code", "Linux", "Bash"]
-  };
 
   return (
-    <div className="relative">
-      {/* Social Sidebar */}
+    <div className="relative min-h-screen">
+      {/* Sidebars (desktop only) */}
       <SocialSidebar urls={urls} />
-      
-      <main className="mx-auto max-w-7xl">
+      <EmailSidebar email={urls.email} />
+      <SectionNavigator />
+
+      <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-0 space-y-0">
+
+        {/* ── Hero ── */}
         <section id="hero">
           <Hero name={name} summary={summary} />
         </section>
-        
-        <div className="px-6 sm:px-10 space-y-8 md:space-y-12">
-          {/* About Section with Interactive Terminal */}
-          <section id="about" className="py-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="text-center mb-12"
-            >
-              <h2 className="text-4xl sm:text-5xl font-bold gradient-text mb-4">About Me</h2>
-              <p className="text-foreground/60 max-w-2xl mx-auto mb-12">
-                Passionate full-stack developer with a love for creating innovative solutions and exploring new technologies
-              </p>
-            </motion.div>
-            <InteractiveTerminal />
-          </section>
 
-          <section id="skills">
-            <SkillsVisualization skillsByCategory={skillsByCategory} />
-          </section>
-          <section id="education">
-            <EducationList items={r.education} />
-          </section>
-          {r.experience?.length ? (
-            <section id="experience">
-              <ExperienceTimeline items={r.experience} />
-            </section>
-          ) : null}
-          {r.projects?.length ? (
-            <section id="projects">
-              <ProjectsGrid items={r.projects} />
-            </section>
-          ) : null}
-          {r.certifications?.length ? (
-            <section id="certifications">
-              <CertificationsList items={r.certifications} />
-            </section>
-          ) : null}
+        {/* ── Stats Bar ── */}
+        <section className="border-t border-border pt-12 pb-4 px-0">
+          <StatsBar />
+        </section>
 
-          {/* Interactive Resume Section */}
-          <InteractiveResume />
-
-          {/* Unique Sections - Day Timeline & Learning Path */}
-          <UniqueSections />
-          
-          {(r.leadership?.length || r.languages?.length) ? (
-            <section className="w-full max-w-6xl mx-auto py-12">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {r.leadership?.length ? (
-                  <LeadershipGallery items={r.leadership} />
-                ) : null}
-                
-                {r.languages?.length ? (
-                  <div className="glass-card rounded-2xl p-8 space-y-4">
-                    <h3 className="text-3xl font-bold gradient-text mb-6">Languages</h3>
-                    <div className="flex flex-wrap gap-3">
-                      {r.languages.map((lang, i) => (
-                        <span
-                          key={i}
-                          className="px-4 py-2 rounded-xl glass-card text-foreground/80 font-medium"
-                        >
-                          {lang}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                ) : null}
-              </div>
-            </section>
-          ) : null}
-          
-          {/* Contact Form */}
-          <ContactForm />
-        </div>
-        
-        <footer className="relative mt-24 mb-12 px-6">
+        {/* ── About ── */}
+        <section id="about" className="border-t border-border pt-16 pb-4">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 15 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center"
+            className="grid md:grid-cols-3 gap-8"
           >
-            {/* Decorative line */}
-            <div className="max-w-md mx-auto mb-8">
-              <div className="h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
+            {/* Title Column */}
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider badge-indigo mb-3">
+                <User className="w-3.5 h-3.5" />
+                <span>Profile</span>
+              </div>
+              <h2 className="text-3xl font-bold tracking-tight text-foreground">About Me</h2>
             </div>
-            
-            <div className="glass-card rounded-full inline-flex items-center gap-3 px-8 py-4 group hover:scale-105 transition-transform duration-300">
-              <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              <span className="text-sm text-foreground/60">
-                Last updated {r.generatedAt ? new Date(r.generatedAt).toLocaleDateString() : "manually"}
-              </span>
-            </div>
-            
-            {/* Floating particles */}
-            <div className="absolute inset-0 pointer-events-none overflow-hidden">
-              {[...Array(3)].map((_, i) => (
-                <motion.div
-                  key={i}
-                  className="absolute w-1 h-1 rounded-full bg-purple-400/30"
-                  style={{
-                    left: `${20 + i * 30}%`,
-                    bottom: "20%",
-                  }}
-                  animate={{
-                    y: [-20, -60],
-                    opacity: [0, 1, 0],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    delay: i * 0.8,
-                    ease: "easeOut",
-                  }}
-                />
-              ))}
+
+            {/* Detail Column */}
+            <div className="md:col-span-2 space-y-6">
+              <p className="text-muted leading-relaxed text-sm sm:text-base">
+                I am a dedicated Software Engineer with a deep interest in distributed systems, clean code architectures,
+                and cloud infrastructure. With strong fundamentals in Data Structures and Algorithms, I enjoy designing
+                efficient systems and building robust backend and full-stack applications.
+              </p>
+
+              <div className="grid sm:grid-cols-2 gap-4 text-sm text-muted">
+                <div className="flex items-center gap-2.5">
+                  <MapPin className="w-4 h-4 text-muted/80 flex-shrink-0" />
+                  <span>Located in {r.basics?.location || "Erode, India"}</span>
+                </div>
+                <div className="flex items-center gap-2.5">
+                  <Mail className="w-4 h-4 text-muted/80 flex-shrink-0" />
+                  <a href={`mailto:${r.basics?.email}`} className="hover:underline hover:text-foreground transition-colors truncate">
+                    {r.basics?.email}
+                  </a>
+                </div>
+                {r.languages && r.languages.length > 0 && (
+                  <div className="flex items-center gap-2.5 sm:col-span-2">
+                    <Globe className="w-4 h-4 text-muted/80 flex-shrink-0" />
+                    <span>Languages: {r.languages.join(", ")}</span>
+                  </div>
+                )}
+              </div>
             </div>
           </motion.div>
-        </footer>
+        </section>
+
+        {/* ── Specializations ── */}
+        <section className="border-t border-border pt-16 pb-4">
+          <Specializations />
+        </section>
+
+        {/* ── Tech Marquee ── */}
       </main>
+
+      {/* Full-width marquee (outside constrained main) */}
+      <TechMarquee />
+
+      <main className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8 pb-0 space-y-0">
+
+        {/* ── Skills ── */}
+        <section className="border-t border-border pt-12">
+          <SkillsVisualization skillsByCategory={r.skillsByCategory} />
+        </section>
+
+        {/* ── Education ── */}
+        <section className="border-t border-border pt-12">
+          <EducationList items={r.education} />
+        </section>
+
+        {/* ── Experience ── */}
+        {r.experience?.length ? (
+          <section id="experience" className="border-t border-border pt-12">
+            <ExperienceTimeline items={r.experience} />
+          </section>
+        ) : null}
+
+        {/* ── Projects ── */}
+        {r.projects?.length ? (
+          <section id="projects" className="border-t border-border pt-12">
+            <ProjectsGrid items={r.projects} />
+          </section>
+        ) : null}
+
+        {/* ── Certifications ── */}
+        {r.certifications?.length ? (
+          <section className="border-t border-border pt-12">
+            <CertificationsList items={r.certifications} />
+          </section>
+        ) : null}
+
+        {/* ── Achievements ── */}
+        {r.leadership?.length ? (
+          <section className="border-t border-border pt-16 pb-16">
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="grid md:grid-cols-3 gap-8"
+            >
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider badge-rose mb-3">
+                  <Award className="w-3.5 h-3.5" />
+                  <span>Impact</span>
+                </div>
+                <h2 className="text-3xl font-bold tracking-tight text-foreground">Achievements</h2>
+              </div>
+
+              <div className="md:col-span-2">
+                <div className="border border-border bg-card rounded-xl p-6 sm:p-8 shadow-sm">
+                  <ul className="space-y-4">
+                    {r.leadership.map((item, idx) => (
+                      <li key={idx} className="flex items-start gap-3 text-muted text-sm sm:text-base leading-relaxed">
+                        <div className="mt-2.5 w-1.5 h-1.5 rounded-full bg-rose-500 flex-shrink-0" />
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </motion.div>
+          </section>
+        ) : null}
+
+        {/* ── Contact ── */}
+        <section id="contact" className="border-t border-border pt-12">
+          <ContactForm />
+        </section>
+
+      </main>
+
+      {/* ── Footer ── */}
+      <Footer name={name} urls={urls} />
     </div>
   );
 }
