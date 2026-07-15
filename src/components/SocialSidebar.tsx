@@ -116,7 +116,11 @@ export function SocialSidebar({ urls = {} }: Props) {
       const el = document.getElementById(id);
       if (!el) return null;
       const obs = new IntersectionObserver(([e]) => {
-        e.isIntersecting ? active.add(id) : active.delete(id);
+        if (e.isIntersecting) {
+          active.add(id);
+        } else {
+          active.delete(id);
+        }
         setVisible(active.size === 0);
       }, { threshold: 0.05 });
       obs.observe(el);

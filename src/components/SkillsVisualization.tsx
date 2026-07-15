@@ -72,7 +72,7 @@ export function SkillsVisualization({ skillsByCategory = {} }: Props) {
       <div className="grid sm:grid-cols-2 gap-5">
         {categories.map((category, idx) => {
           const meta = CATEGORIES.find((c) => c.name === category);
-          const Icon = meta?.icon ?? Code;
+          const Icon = (meta?.icon ?? Code) as React.ComponentType<{ className?: string }>;
           const skills = skillsByCategory[category] ?? [];
 
           return (

@@ -83,7 +83,7 @@ export function ContactForm() {
           <a href="https://linkedin.com/in/stellar2703" target="_blank" rel="noopener noreferrer" className="text-accent font-semibold hover:underline">
             LinkedIn
           </a>
-          , or fill out the form — I'll reply within 24 hours.
+          , or fill out the form — I&apos;ll reply within 24 hours.
         </p>
       </motion.div>
 
@@ -163,7 +163,7 @@ export function ContactForm() {
           }`}
         >
           {status === "loading" && <><div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" /><span>Sending...</span></>}
-          {status === "success" && <><CheckCircle className="w-4 h-4" /><span>Message sent! I'll be in touch soon.</span></>}
+          {status === "success" && <><CheckCircle className="w-4 h-4" /><span>Message sent! I&apos;ll be in touch soon.</span></>}
           {status === "error"   && <><AlertCircle className="w-4 h-4" /><span>Failed — try emailing directly</span></>}
           {status === "idle"    && <><Send className="w-4 h-4" /><span>Send Message</span></>}
         </button>

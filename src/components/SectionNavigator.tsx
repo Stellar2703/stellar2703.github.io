@@ -39,7 +39,11 @@ export function SectionNavigator() {
       const el = document.getElementById(id);
       if (!el) return null;
       const o = new IntersectionObserver(([e]) => {
-        e.isIntersecting ? active.add(id) : active.delete(id);
+        if (e.isIntersecting) {
+          active.add(id);
+        } else {
+          active.delete(id);
+        }
         setVisible(active.size === 0);
       }, { threshold: 0.05 });
       o.observe(el);
